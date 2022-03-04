@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <body>
+    <div ng-app="myModule" ng-controller="myController">
+      <ul>
+          <li ng-repeat='con in c'>
+                {{con}}
+          </li>
+      </ul>
+
+    <script>
+      var app = angular.module("myModule", []);
+      app.controller("myController", function ($scope) {
+        var c=['hyd','mum','ban']
+        $scope.c =c;
+      });
+    </script>
+  </body>
+</html>

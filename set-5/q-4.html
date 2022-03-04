@@ -1,0 +1,24 @@
+<html>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <body ng-app="">
+    Choose your Branch:
+    <select ng-model="branch">
+      <option value="cricket">cricket</option>
+      <option value="chess">chess</option>
+    </select>
+
+    <hr />
+    <div ng-switch="branch">
+      <div ng-switch-when="cricket">
+        <h1>Cricket team has 11 players</h1>
+      </div>
+      <div ng-switch-when="chess">
+        <h1>It's a mind game</h1>
+      </div>
+
+      <div ng-switch-default>
+        <h1>No Course Selected</h1>
+      </div>
+    </div>
+  </body>
+</html>

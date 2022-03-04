@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>Area of the Circle</title>
+  </head>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+  <body>
+    <br /><br />
+    <h3>Area of the Circle</h3>
+    <div ng-app="">
+      <p>
+        Enter the radius of circle:
+        <input type="text" ng-model="radius" maxlength="5" size="3" />
+      </p>
+      <br />
+      <p>The area of circle is:{{ radius * radius * 3.14159}}</p>
+    </div>
+  </body>
+</html>

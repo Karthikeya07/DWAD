@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <body>
+    <br /><br />
+    <div ng-app="myApp" ng-controller="myCtrl">
+      Name: <input placeholder="enter name" ng-model="name" />
+      <h2>The entered name is {{name}}</h2>
+      Name: <input placeholder="enter age" ng-model="age" />
+      <h2>{{name}}'s age is: {{age}}</h2>
+    </div>
+
+    <script>
+      var app = angular.module("myApp", []);
+      app.controller("myCtrl", function ($scope) {
+        $scope.name = "";
+        $scope.age = "";
+      });
+    </script>
+  </body>
+</html>

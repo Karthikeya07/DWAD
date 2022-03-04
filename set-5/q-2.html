@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <body ng-app="">
+        <h3>Swapna hobbies are :</h3>
+        <input type="checkbox" ng-model="myVar"/>
+        <p>click me to show swapna's hobbies</p>
+        <div ng-show="myVar">
+        <ul>
+            <li>Cricket</li>
+            <li>Chess</li>
+            <li>Tennis</li>
+        </ul>
+        </div>
+    </body>
+</html>
