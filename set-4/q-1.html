@@ -1,0 +1,27 @@
+<html>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"> </script>
+   <style>
+      .odd { color:pink; background-color:yellow; }
+      .even { color:yellow; background-color:pink; }
+   </style>
+   <body ng-app="myApp">
+      <table ng-controller="myCtrl">
+         <tr ng-repeat="x in records" ng-class-odd="'odd'" ng-class-even="'even'">
+            <td>{{x.Name}}</td>
+            <td>{{x.Country}}</td>
+         </tr>
+      </table>
+      <script>
+         var app = angular.module("myApp", []);
+         app.controller("myCtrl", function($scope)
+         {
+         $scope.records = [
+         { "Name" : "Shane Warne", "Country" : "Australia" },
+         { "Name" : "Virat Kohli", "Country" : "India" },
+         { "Name" : "Ricky Ponting", "Country" : "Australia" }, { "Name" : "Rohit Sharma", "Country" : "India" } ,
+         { "Name" : "Adam Gilchrist", "Country" : "Australia" } ,
+         { "Name" : "KL Rahul", "Country" :"India" } ]
+         });
+      </script>
+   </body>
+</html>

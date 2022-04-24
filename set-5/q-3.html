@@ -1,20 +1,45 @@
-<!DOCTYPE html>
 <html>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-  <body>
-    <div ng-app="myModule" ng-controller="myController">
-      <ul>
-          <li ng-repeat='con in c'>
-                {{con}}
-          </li>
-      </ul>
-
-    <script>
-      var app = angular.module("myModule", []);
-      app.controller("myController", function ($scope) {
-        var c=['hyd','mum','ban']
-        $scope.c =c;
-      });
-    </script>
-  </body>
+   <head>
+      <title>AngularJS Custom Filter Application</title>
+      <script src ="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"> </script>
+   </head>
+   <body ng-app = "myApp" ng-controller="myController">
+      <h1>Employee Details of VCE before filter</h1>
+      <table border=1>
+         <tr>
+            <th> Name of the Employee</th>
+            <th> Gender</th>
+            <th> Salary</th>
+         </tr>
+         <tr ng-repeat="x in employee">
+            <td>{{x.name}}</td>
+            <td>{{x.gender}}</td>
+            <td>{{x.salary}}</td>
+         </tr>
+      </table>
+      <h1>Employee Details of VCE After applying Grade filter</h1>
+      <table border=1>
+         <tr>
+            <th> Name of the Employee</th>
+            <th> Gender</th>
+            <th> Salary</th>
+         </tr>
+         <tr ng-repeat="x in employee">
+            <td>{{x.name}}</td>
+            <td>{{x.gender}}</td>
+            <td>{{x.salary | salary}}</td>
+         </tr>
+      </table>
+      <script>
+         var app=angular.module("myApp",[]); app.filter("salary",function(){
+         return function(salary){ if(salary>=20000){
+         return "A"; }
+         else{ return "B"; }
+         }
+         });
+         app.controller("myController",function($scope){ $scope.employee=[ {name:"Adwaitha",gender:"female",salary:589000}, {name:"Kruti",gender:"female",salary:56000}, {name:"siva",gender:"male",salary:67000}, {name:"Arjun",gender:"male",salary:98000}
+         ];
+         });
+      </script> 
+   </body>
 </html>
