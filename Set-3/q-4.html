@@ -1,0 +1,26 @@
+<html>
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+   <body ng-app="">
+      Choose your Branch:
+      <select ng-model="branch">
+         <option value="cse">Computer Science and Engineering
+         <option value="ece">electronics and Communication Engineering
+         <option value="eee">Electrical and Electronis Engineering
+      </select>
+      <hr>
+      <div ng-switch="branch">
+         <div ng-switch-when="cse">
+            <h1>It Has Programming Languages</h1>
+         </div>
+         <div ng-switch-when="ece">
+            <h1>It has Circuit Desing Courses</h1>
+         </div>
+         <div ng-switch-when="eee">
+            <h1>It has Machines Related courses</h1>
+         </div>
+         <div ng-switch-default>
+            <h1>No Course Selected</h1>
+         </div>
+      </div>
+   </body>
+</html>

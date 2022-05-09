@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+   <script
+      src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+   <body>
+      <div data-ng-app="" data-ng-init="quantity=1;price=20">
+         Quantity: 
+         <select name="quantity" ng-model="quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+         </select>
+         Price: <input type="number" ng-model="price">
+         <p>
+            <b>Total in rupees:</b> <span 
+               ng-bind="quantity*price">
+            </span>
+         </p>
+      </div>
+   </body>
+</html>

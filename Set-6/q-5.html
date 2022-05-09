@@ -1,0 +1,37 @@
+<html>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <style>
+        .cse {
+            color: white;
+            background-color: aqua;
+            padding: 20px;
+            font-family: "Courier New";
+        }
+        .ece {
+            color: green;
+            background-color: brown;
+            padding: 30px;
+        }
+        .eee {
+            background-color: red;
+            padding: 40px;
+            font-family: Verdana;
+        }
+    </style>
+    <body ng-app="">
+        <h3>
+            Select The Branch
+            <select ng-model="branch">
+                <option value="cse"> Computer Science & Engineering</option>
+                <option value="ece"> Electronics & Communication Engineering</option>
+                <option value="eee">Electrical & Electronics Engineering</option>
+            </select>
+        </h3>
+        <div ng-class="branch">
+            <h3>Vardhaman College of Engineering</h3>
+            <h3>Shamshabad</h3>
+            <h3>Hyderabad</h3>
+        </div>
+    </body>
+</html>
+

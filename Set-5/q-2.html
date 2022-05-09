@@ -1,0 +1,16 @@
+<html>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <body>
+        <div style="color: rgb(194, 67, 50);" ng-app="app11" ng-controller="myFun">
+            <h2>This is {{fName + " " + lName}}</h2>
+        </div>
+        <script>
+            var app = angular.module("app11", []);
+            app.controller("myFun", function ($scope) {
+                $scope.fName = "Karthikeya";
+                $scope.lName = "Nagandla";
+            });
+        </script>
+    </body>
+</html>
+

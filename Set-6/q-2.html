@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <body>
+        <div ng-app="myApp" ng-controller="nCtrl">
+            <h1>Rs: {{prize | number}}</h1>
+            <h1>Weight: {{weight | number : 3}} Kg</h1>
+            <h1>Quantity: {{qty | number }}</h1>
+        </div>
+        <script>
+            var app = angular.module("myApp", []);
+            app.controller("nCtrl", function ($scope) {
+                $scope.prize = 46568;
+                $scope.weight = 789.25636;
+                $scope.qty = 4;
+            });
+        </script>
+    </body>
+</html>
+

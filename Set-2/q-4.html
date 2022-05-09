@@ -1,0 +1,30 @@
+<! DOCTYPE html>
+<head>
+   <title>AngualrJS Controller</title>
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+   <div ng-controller="parentController">
+      Controller Name: {{controllerName}} <br />
+      Message: {{msg}} <br />
+      <div ng-controller="childController">
+         Controller Name: {{controllerName}} <br />
+         Message: {{msg}} <br />
+      </div>
+   </div>
+   <div ng-controller="siblingController">
+      Controller Name: {{controllerName}} <br />
+      Message: {{msg}} <br />
+   </div>
+   <script>
+      var app = angular.module('myApp', []);
+      app.controller('parentController', function ($scope, $rootScope) {
+      $scope.controllerName = "parentController";
+      $rootScope.msg = "Common property of all controllers ";});
+      app.controller('childController', function ($scope) {
+      $scope.controllerName = "childController";  });
+      app.controller('siblingController', function ($scope) {
+      $scope.controllerName = "siblingController"; });
+   </script>
+</body>
+</html>
