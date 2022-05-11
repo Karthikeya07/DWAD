@@ -1,5 +1,3 @@
-# DWAD
-DWAD lab
 # Set 1(Answer any 4 questions)
 1. AngularJS application to compute “total price=quantity*price” using ng-bind, (hint: design quantity using selection tag).
 2. AngularJS application to initialize a JS object using ng-init and access it using ng-bind
